@@ -36,9 +36,9 @@
             background-clip: text;
         }
         .main-content {
-            margin-top: 80px;
-            min-height: calc(100vh - 80px);
-        }
+    padding-top: 5px; /* Move packages higher, just below the header */
+    margin-top: 0;
+}
         .section-title {
             text-align: center;
             margin: 3rem 0 2rem 0;
@@ -109,24 +109,25 @@
             position: absolute;
             left: 0;
         }
+        /* Make sure the Back to Homepage button is always visible below the fixed header */
         .btn-back {
-            display: inline-block;
-            margin: 2rem 0 0 2rem;
-            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
-            color: white;
-            padding: 0.7rem 2rem;
-            border: none;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.2);
-        }
-        .btn-back:hover {
-            background: linear-gradient(135deg, #f7931e 0%, #ff6b35 100%);
-            color: #fff;
-            transform: translateY(-2px);
-        }
+    display: inline-block;
+    margin: 80px 0 2rem 2rem; /* 80px top margin matches your header height */
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    color: white;
+    padding: 0.7rem 2rem;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.2);
+}
+.btn-back:hover {
+    background: linear-gradient(135deg, #f7931e 0%, #ff6b35 100%);
+    color: #fff;
+    transform: translateY(-2px);
+}
         .btn-book {
             background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
             color: #fff;
@@ -162,6 +163,7 @@
         </div>
     </header>
     <main class="main-content">
+        <a href="homepage.php" class="btn-back" style="margin:2rem 0 2rem 2rem;">← Back to Homepage</a>
         <div class="section-title">
             <h2>Puerto Galera Packages</h2>
             <p>Choose your adventure! Each package includes unique activities for an unforgettable experience.</p>
@@ -210,7 +212,6 @@
                 </div>
             </div>
         </div>
-        <a href="homepage.php" class="btn-back">← Back to Homepage</a>
     </main>
     <!-- Booking Modal -->
     <div id="bookingModal" class="modal-overlay">
